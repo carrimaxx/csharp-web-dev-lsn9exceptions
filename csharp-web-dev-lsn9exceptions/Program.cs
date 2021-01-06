@@ -16,6 +16,7 @@ namespace csharp_web_dev_lsn9exceptions
         static int CheckFileExtension(string fileName)
         {
             int points = 0;
+
             if (fileName == null || fileName == "")
             {
                 throw new ArgumentException("Invalid input, filename is either null or empty");
@@ -40,7 +41,7 @@ namespace csharp_web_dev_lsn9exceptions
             }
             catch (ArgumentOutOfRangeException e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("Error: {0}", e.Message);
             }
             
             // Test out your CheckFileExtension() function here!
@@ -62,6 +63,7 @@ namespace csharp_web_dev_lsn9exceptions
                     Console.WriteLine(student.Key + ": {0}", e.Message);
                 }
             }
+
         }
     }
 }
